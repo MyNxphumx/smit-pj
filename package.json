@@ -1,0 +1,21 @@
+{
+  "name": "khonkaen-public-health-prototype",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "node server.mjs --dev",
+    "test": "node test.mjs",
+    "start": "node server.mjs",
+    "prestart": "node build.mjs",
+    "test:server": "node server-test.mjs"
+  },
+  "devDependencies": {
+    "fake-indexeddb": "^6.2.5",
+    "jsdom": "^29.1.1",
+    "tldts": "^7.4.16"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

@@ -1,0 +1,1 @@
+import fs from 'node:fs/promises';import vm from 'node:vm';await fs.mkdir('dist',{recursive:true});for(const f of ['index.html','app.js','workflow.js','styles.css']){const s=await fs.readFile(f,'utf8');if(f.endsWith('.js'))new vm.Script(s);await fs.writeFile('dist/'+f,s);}await fs.copyFile('logo.png','dist/logo.png');console.log('Build passed: dist');
